@@ -2,12 +2,10 @@ package mediator;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-
 import model.Member;
 import model.MemberList;
-import model.UniqueCounter;
 
-public class ModelManager implements Serializable{
+public class ModelManager implements Serializable {
 	private MemberList memberList;
 	private String returnMessage;
 

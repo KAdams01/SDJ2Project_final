@@ -15,18 +15,18 @@ public class FileIO implements Adaptor {
 		try {
 			FileInputStream fstream = new FileInputStream("ModelManager.ser");
 			ObjectInputStream objStream = new ObjectInputStream(fstream);
-			ModelManager model = (ModelManager)objStream.readObject();
+			ModelManager model = (ModelManager) objStream.readObject();
 			objStream.close();
 			return model;
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println("File not found. Creating new file");
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		return null;
-		
+
 	}
 
 	@Override

@@ -19,7 +19,7 @@ public class View {
 
 	public static void main(String[] args) throws RemoteException {
 		View view = new View();
-		
+
 	}
 
 	public static void printMainMenu() {
@@ -56,7 +56,7 @@ public class View {
 			controller.save();
 			System.exit(0);
 		}
-		default:{
+		default: {
 			System.out.println("Invalid input.");
 			break;
 		}
