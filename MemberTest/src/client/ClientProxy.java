@@ -7,7 +7,7 @@ import java.rmi.RemoteException;
 import mediator.ModelManager;
 import server.RemoteInterface;
 
-public class ClientProxy implements Serializable{
+public class ClientProxy {
 	private static RemoteInterface remote;
 	private ModelManager modelManager;
 	

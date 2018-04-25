@@ -8,7 +8,7 @@ import java.rmi.server.UnicastRemoteObject;
 import adaptor.FileIO;
 import mediator.ModelManager;
 
-public class ServerProxy extends UnicastRemoteObject implements Serializable, RemoteInterface {
+public class ServerProxy extends UnicastRemoteObject implements RemoteInterface {
 	private ModelManager modelManager;
 	private FileIO file = new FileIO();
 
