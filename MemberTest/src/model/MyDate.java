@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class MyDate implements Serializable{
-	private Calendar calendar;
+	private static Calendar calendar;
 	private static MyDate myDate;
 
 	private MyDate() {
@@ -14,7 +14,8 @@ public class MyDate implements Serializable{
 
 	public static MyDate getInstance() {
 		if (myDate == null) {
-			return new MyDate();
+			System.out.println("FirstMyDate");
+			myDate = new MyDate();
 		}
 		return myDate;
 	}

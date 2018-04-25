@@ -1,6 +1,5 @@
 package server;
 
-import java.io.Serializable;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -8,6 +7,7 @@ import java.rmi.server.UnicastRemoteObject;
 import adaptor.FileIO;
 import mediator.ModelManager;
 
+@SuppressWarnings("serial")
 public class ServerProxy extends UnicastRemoteObject implements RemoteInterface {
 	private ModelManager modelManager;
 	private FileIO file = new FileIO();

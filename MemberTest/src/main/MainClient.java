@@ -7,8 +7,6 @@ import view.View;
 
 public class MainClient {
 	public static void main(String[] args) throws RemoteException {
-		Controller controller = new Controller();
-		View view = new View(controller);
-
+		View view = new View();
 	}
 }

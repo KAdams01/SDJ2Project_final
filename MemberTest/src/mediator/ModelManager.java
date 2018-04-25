@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import model.Member;
 import model.MemberList;
 
+@SuppressWarnings("serial")
 public class ModelManager implements Serializable {
 	private MemberList memberList;
 	private String returnMessage;

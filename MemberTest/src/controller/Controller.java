@@ -5,12 +5,15 @@ import java.util.ArrayList;
 
 import client.ClientProxy;
 import mediator.ModelManager;
+import view.View;
 
 public class Controller {
 	private ModelManager modelManager;
 	private ClientProxy client;
+	private View view;
 
-	public Controller() {
+	public Controller(View view) {
+		this.view = view;
 		client = new ClientProxy();
 		modelManager = client.getModelManager();
 	}
@@ -32,4 +35,37 @@ public class Controller {
 		client.save();
 	}
 
+	public void handleAction(int input) throws RemoteException {
+		switch (input) {
+		case 1: {
+			view.show("Enter Membership Number");
+			view.show(payFee(view.getMemberNo()));
+			break;
+		}
+		case 2: {
+			view.show("Enter first name");
+			String firstName = view.getFirstName();
+			view.show("Enter last name");
+			String lastName = view.getLastName();
+			addMemberToList(firstName, lastName);
+			view.show("Member Added.");
+			break;
+		}
+		case 3: {
+			for (int i = 0; i < getUnpaidMembers().size(); i++) {
+				view.show(getUnpaidMembers().get(i));
+			}
+			break;
+		}
+		case 0: {
+			save();
+			System.exit(0);
+		}
+		default: {
+			view.show("Invalid input");
+			break;
+		}
+		}
+
+	}
 }

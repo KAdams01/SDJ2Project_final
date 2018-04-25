@@ -1,6 +1,5 @@
 package client;
 
-import java.io.Serializable;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 
