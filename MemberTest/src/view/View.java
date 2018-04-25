@@ -9,17 +9,12 @@ public class View {
 	static Scanner keyboard = new Scanner(System.in);
 	private Controller controller;
 
-	public View() throws RemoteException {
-		controller = new Controller();
+	public View(Controller controller) throws RemoteException {
+		this.controller = controller;
 		while (true) {
 			printMainMenu();
 			handleInput(keyboard.nextInt());
 		}
-	}
-
-	public static void main(String[] args) throws RemoteException {
-		View view = new View();
-
 	}
 
 	public static void printMainMenu() {

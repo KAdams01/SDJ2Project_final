@@ -3,15 +3,15 @@ package controller;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
-import client.Client;
+import client.ClientProxy;
 import mediator.ModelManager;
 
 public class Controller {
 	private ModelManager modelManager;
-	private Client client;
+	private ClientProxy client;
 
 	public Controller() {
-		client = new Client();
+		client = new ClientProxy();
 		modelManager = client.getModelManager();
 	}
 
