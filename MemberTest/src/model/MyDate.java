@@ -6,6 +6,7 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
+@SuppressWarnings("serial")
 public class MyDate implements Serializable{
 	private static Calendar calendar;
 	private static MyDate myDate;
@@ -48,5 +49,4 @@ public class MyDate implements Serializable{
 	private Object readResolve() {
 		return myDate;
 	}
-	
 }

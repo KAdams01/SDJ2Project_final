@@ -7,6 +7,7 @@ import view.View;
 
 public class MainClient {
 	public static void main(String[] args) throws RemoteException {
-		View view = new View();
+		@SuppressWarnings("unused")
+		View view = new View(new Controller());
 	}
 }
