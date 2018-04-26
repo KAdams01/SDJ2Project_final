@@ -17,7 +17,7 @@ public class View {
 		}
 	}
 
-	public static void printMainMenu() {
+	public void printMainMenu() {
 		System.out.println("Enter a value based on the following options:");
 		System.out.println("1: Pay Fee (requires membership number)");
 		System.out.println("2: Add New Member");
