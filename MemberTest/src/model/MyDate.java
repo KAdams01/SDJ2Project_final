@@ -14,7 +14,7 @@ public class MyDate implements Serializable{
 		calendar = Calendar.getInstance();
 	}
 
-	public static MyDate getInstance() {
+	public synchronized static MyDate getInstance() {
 		if (myDate == null) {
 			System.out.println("FirstMyDate");
 			myDate = new MyDate();

@@ -30,16 +30,16 @@ public class View {
 	}
 
 	public void getNextAction() throws RemoteException {
-		controller.handleAction(keyboard.nextInt());
+		int temp = keyboard.nextInt();
+		keyboard.nextLine();
+		controller.handleAction(temp);
 	}
 	public int getMemberNo() {
-		return keyboard.nextInt();
+		int temp = keyboard.nextInt();
+		return temp;
 	}
-	public String getFirstName() {
-		keyboard.nextLine();
-		return keyboard.nextLine();
-	}
-	public String getLastName() {
-		return keyboard.nextLine();
+	public String getStringInput() {
+		String temp = keyboard.nextLine();
+		return temp;
 	}
 }

@@ -19,11 +19,13 @@ public class MemberList implements Serializable {
 
 	public ArrayList<String> getAllUnpaid() {
 		ArrayList<String> unpaid = new ArrayList<String>();
+//		unpaid.add("First Name " + "Last Name " + " ID " + " Status");
 		for (int i = 0; i < listOfMembers.size(); i++) {
 			if (listOfMembers.get(i).checkState().equalsIgnoreCase("unpaid")) {
 				unpaid.add(listOfMembers.get(i).toString());
 			}
 		}
+		unpaid.add("");
 		return unpaid;
 	}
 

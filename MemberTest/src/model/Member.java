@@ -31,6 +31,6 @@ public class Member implements Serializable {
 		return memberID;
 	}
 	public String toString() {
-		return firstName + " " + lastName + " " + getID() + " " + checkState() + "\n";
+		return firstName + " " + lastName + " " + getID() + " " + checkState();
 	}
 }

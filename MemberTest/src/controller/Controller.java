@@ -44,9 +44,9 @@ public class Controller {
 		}
 		case 2: {
 			view.show("Enter first name");
-			String firstName = view.getFirstName();
+			String firstName = view.getStringInput();
 			view.show("Enter last name");
-			String lastName = view.getLastName();
+			String lastName = view.getStringInput();
 			addMemberToList(firstName, lastName);
 			view.show("Member Added.");
 			break;
